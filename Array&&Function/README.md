@@ -56,7 +56,7 @@
      return x * x;
    }
 
-   functionsquare2 x)
+   functionsquare2 x){
      return x * x;
    }
 
@@ -83,7 +83,7 @@
 
   ```js
   function cube(x) {
-    // your code here
+    return x*x;
   }
   ```
 
@@ -94,11 +94,19 @@
   ```js
   // don't forget the parameters!
   function fullName() {
-    // your code here
+    const person = {
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
   }
-  fullName("John", "Doe") // => "John Doe"
+}
+const person1 = {
+  firstName:"John",
+  lastName: "Doe"
+}
+  }
+person.fullName.call(person1);
+'John Doe'
   ```
-
 9. Write a function `average` that takes two numbers as input (parameters), and
    returns the average of those numbers.
 
